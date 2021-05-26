@@ -78,7 +78,7 @@ const Navbar = () => {
                             className="nav-link"
                             onClick={closeMenu}
                         >
-                            About us
+                            About
                         </Link>
                     </li>
                     <li className="nav-item">
@@ -92,11 +92,11 @@ const Navbar = () => {
                     </li>
                     <li className="nav-item">
                         <Link
-                            to="/join"
+                            to="/contact"
                             className="nav-link"
                             onClick={closeMenu}
                         >
-                            <button className="join pulse">Join Us</button>
+                            <button className="join pulse">Contact</button>
                         </Link>
                     </li>
                 </ul>

@@ -7,6 +7,7 @@ import Transformation from "../assets/transformation.png";
 import Operation from "../assets/operation.png";
 import Team from "../assets/Team.png";
 import ScrollAnimation from "react-animate-on-scroll";
+import { Link } from "react-router-dom";
 
 const Home = () => {
     return (
@@ -32,7 +33,7 @@ const Home = () => {
                             <div className="fg">Subsequent development </div>
                         </div>
                     </div>
-                    <button className="join">Join the community</button>
+                    <Link to="/authorization"><button className="join">Join the community</button> </Link>
                 </div>
             </div>
             <ScrollAnimation animateIn="fadeIn" animateOnce>

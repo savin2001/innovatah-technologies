@@ -11,32 +11,15 @@ import Loading from "./components/Loading";
 import Home from "./pages/Home";
 import Services from "./pages/Services";
 import About from "./pages/About";
-import Join from "./pages/Join";
+import Contact from "./pages/Contact";
 import Products from "./pages/Products";
 import Innovator from "./pages/Innovator";
 import Focus from "./pages/Focus";
 import Trainings from "./pages/Trainings";
 import Blog from "./pages/Blog";
+import Authorization from "./pages/Authorization"
 
 function App() {
-    // const [isLoading, setIsLoading] = useState(true);
-    // const [isError, setIsError] = useState(false);
-    // // const [user, setUser] = useState("default user");
-
-    // if (isLoading) {
-    //     // setIsError(false);
-    //     // setUser(false);
-    //     <Loading/>
-    // }
-    // if (isError) {
-    //     setIsLoading(false);
-    //     // setUser(false);
-    //     return (
-    //         <div className="web-state">
-    //             <h3>Error....</h3>
-    //         </div>
-    //     );
-    // }
     const [theme, setTheme] = useState("light");
     const themeToggler = () => {
         theme === "light" ? setTheme("dark") : setTheme("light");
@@ -104,7 +87,8 @@ function App() {
                             />
                             <Route path="/about" exact component={About} />
                             <Route path="/blog" exact component={Blog} />
-                            <Route path="/join" exact component={Join} />
+                            <Route path="/contact" exact component={Contact} />
+                            <Route path="/authorization" exact component={Authorization} />
                         </Switch>
                     </Router>
                 </div>
