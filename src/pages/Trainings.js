@@ -10,6 +10,8 @@ import InfoSec from "../assets/Infosec.png";
 import Cloud from "../assets/Cloud.png"
 import Mobile from "../assets/Mobile.png"
 import ScrollAnimation from "react-animate-on-scroll";
+import { Link } from "react-router-dom";
+
 const Trainings = () => {
     return (
         <>
@@ -25,7 +27,7 @@ const Trainings = () => {
                                 science or cybersecurity
                             </h1>
 
-                            <button className="join">Join the community</button>
+                            <Link to="/authorization"><button className="join">Join the community</button> </Link>
                         </div>
                     </div>
                 </div>
