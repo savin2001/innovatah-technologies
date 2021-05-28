@@ -18,6 +18,7 @@ import Focus from "./pages/Focus";
 import Trainings from "./pages/Trainings";
 import Blog from "./pages/Blog";
 import Authorization from "./pages/Authorization"
+import API from "./pages/Api"
 
 function App() {
     const [theme, setTheme] = useState("light");
@@ -76,6 +77,11 @@ function App() {
                                 component={Products}
                             />
                             <Route
+                                path="/api"
+                                exact
+                                component={API}
+                            />
+                            <Route
                                 path="/trainings"
                                 exact
                                 component={Trainings}
@@ -91,8 +97,8 @@ function App() {
                             <Route path="/authorization" exact component={Authorization} />
                         </Switch>
                     </Router>
-                </div>
                 <Footer />
+                </div>
             </>
         </ThemeProvider>
     );

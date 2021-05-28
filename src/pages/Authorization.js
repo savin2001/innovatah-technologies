@@ -9,13 +9,13 @@ const Authorization = () => {
     if (login) {
         setLogin(() => {
             moveLeft.style.left = "50px";
-            moveRight.style.left = "450px";
+            moveRight.style.left = "550px";
             toggler.style.left = "0";
         });
     }
     if (register) {
         setRegister(() => {
-            moveLeft.style.left = "-400px";
+            moveLeft.style.left = "-500px";
             moveRight.style.left = "50px";
             toggler.style.left = "110px";
         });
@@ -84,11 +84,64 @@ const Authorization = () => {
                                     <div className="input-data">
                                         <input
                                             type="text"
+                                            name="name"
+                                            required
+                                        />
+                                        <div className="underline"></div>
+                                        <label for="">Name</label>
+                                    </div>
+                                </div>
+                                <div className="form-row">
+                                    <div className="input-data">
+                                        <input
+                                            type="email"
+                                            name="name"
+                                            required
+                                        />
+                                        <div className="underline"></div>
+                                        <label for="">Email</label>
+                                    </div>
+                                </div>
+                                <div className="form-row">
+                                    <div className="input-data">
+                                        <input
+                                            type="number"
+                                            name="name"
+                                            required
+                                        />
+                                        <div className="underline"></div>
+                                        <label for="">Phone number</label>
+                                    </div>
+                                </div>
+                                <div className="form-row">
+                                    <div className="input-data">
+                                        <input
+                                            type="text"
+                                            name="name"
+                                            required
+                                        />
+                                        <div className="underline"></div>
+                                        <label for="">
+                                            Level of study{" "}
+                                            <small>
+                                                <blockquote>
+                                                    <i>
+                                                       e.g. university,high school
+                                                    </i>
+                                                </blockquote>
+                                            </small>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div className="form-row">
+                                    <div className="input-data">
+                                        <input
+                                            type="text"
                                             name="username"
                                             required
                                         />
                                         <div className="underline"></div>
-                                        <label for="">Username</label>
+                                        <label for="">Choose username</label>
                                     </div>
                                 </div>
                                 <div className="form-row">
@@ -115,7 +168,9 @@ const Authorization = () => {
                                 </div>
                                 <div className="form-row">
                                     <input type="checkbox" name="" id="" />
-                                    <span className="">I agree to the terms and conditions</span>
+                                    <span className="">
+                                        I agree to the terms and conditions
+                                    </span>
                                 </div>
                                 <button
                                     type="submit"

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Blog = () => {
     return (
@@ -6,12 +7,10 @@ const Blog = () => {
             <div className="container-landing">
                 <div className="landing slideLeft">
                     <h1>
-                        A <strong>social enterprise</strong> that intends to
-                        lead in full innovations circles towards creative
-                        systems
+                        A <strong>blog page</strong> 
                     </h1>
 
-                    <button className="join">Join the community</button>
+                    <Link to="/authorization"><button className="join">Start your journey</button> </Link>
                 </div>
             </div>
         </>

@@ -33,7 +33,7 @@ const Home = () => {
                             <div className="fg">Subsequent development </div>
                         </div>
                     </div>
-                    <Link to="/authorization"><button className="join">Join the community</button> </Link>
+                    <Link to="/authorization"><button className="join">Start your journey</button> </Link>
                 </div>
             </div>
             <ScrollAnimation animateIn="fadeIn" animateOnce>

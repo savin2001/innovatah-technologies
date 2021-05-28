@@ -276,7 +276,7 @@ a:visited {
     position: relative;
     padding-bottom: 3px;
     margin-right: 10px;
-    text-transform: capitalize;
+    text-transform: uppercase;
 }
 .nav-item:last-child {
     margin-right: 0;
@@ -310,16 +310,7 @@ a:visited {
     height: 1px;
     background-color: solid var(--theme-color);
 }
-.nav-link {
-    text-decoration: none;
-    color: var(--main-text-color);
-    transition: 0.3s all;
-    padding: 20px 0;
-}
-.nav-link:hover {
-    color: var(--theme-color);
-    transition: 0.5s all;
-}
+
 .join {
     padding: 0.3rem 1.5rem;
     border: none;
@@ -366,7 +357,55 @@ a:visited {
     font-size: 2rem;
     cursor: pointer;
 }
+.menu {
+    background: #ffffff;
+    border-radius: 8px;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+    transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
+}
 
+.menu.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    background: #ffffff;
+    z-index: 20;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    border-bottom: 1px solid #dddddd;
+}
+
+.menu li a {
+    text-decoration: none;
+    padding: 15px 20px;
+    display: block;
+    color: var(--main-text-color);
+}
+.nav-link {
+    text-decoration: none;
+    color: var(--main-text-color);
+    transition: 0.3s all;
+}
+.nav-link:hover,
+.menu li a:hover {
+    color: var(--theme-color);
+    transition: 0.5s all;
+}
 /* End of navbar */
 
 /* Footer  */
@@ -919,33 +958,38 @@ form .form-row .textarea {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 90vh;
     width: 100%;
 }
 .hero {
     height: 80%;
     top: 80px;
+    height: 95%;
     background: transparent;
     background-position: center;
     background-size: cover;
     position: absolute;
-    
 }
 .form-box {
-    width: 380px;
-    height: 500px;
+    width: 85vw;
+    max-width: 450px;
+    height: 85%;
     position: relative;
     margin: 6% auto;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     padding: 5px;
-    overflow: hidden;
+    overflow-x: hidden;
+    box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.3) inset;
+    border-radius: 20px;
+    padding: 5px;
 }
+
 .button-box {
-    width: 220px;
+    width: 75vw;
+    max-width: 220px;
     margin: 35px auto;
     position: relative;
     box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.3);
-    border-radius: 30px;
+    border-radius: 20px;
     background-color: #4d4d4dd0;
 }
 .toggle-btn {
@@ -971,18 +1015,23 @@ form .form-row .textarea {
 .input-group {
     top: 100px;
     position: absolute;
-    width: 280px;
+    width: 85vw;
+    max-width: 350px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     transition: 0.5s;
+    padding: 2rem;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 30px;
+    margin-bottom: 8px;
 }
 .input-group .form-row {
     display: block;
     margin: 10px;
 }
 .form-row span {
-    margin: 30px 10px;
+    margin: 30px 5px;
     padding: 20px 0;
 }
 .submit-btn {
@@ -996,9 +1045,11 @@ form .form-row .textarea {
 }
 #login {
     left: 50px;
+}::-webkit-scrollbar {
+    display: none;
 }
 #register {
-    left: 450px;
+    left: 550px;
 }
 /* End of authorization page */
 
@@ -1101,17 +1152,18 @@ form .form-row .textarea {
     .nav-icon {
         display: flex;
     }
+    .menu {
+        top: 50px;
+        right: 30%;
+    }
     .about-card {
         flex-direction: column;
     }
     .focus-cards {
         flex-direction: column;
     }
-    .container .text {
-        /* font-size: 30px; */
-    }
-    .container form {
-        padding: 10px 0 0 0;
+    .input-group {
+        padding: 1.5rem;
     }
     .container form .form-row {
         display: block;
@@ -1148,5 +1200,12 @@ form .form-row .textarea {
         font-size: 14px;
         line-height: 30px;
         padding: 0.7rem 1rem;
+    }
+    .menu {
+        right: 20%;
+    }
+    .input-group {
+        align-self: center;
+        max-width: 240px;
     }
 }

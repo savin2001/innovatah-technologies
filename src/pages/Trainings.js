@@ -27,7 +27,7 @@ const Trainings = () => {
                                 science or cybersecurity
                             </h1>
 
-                            <Link to="/authorization"><button className="join">Join the community</button> </Link>
+                            <Link to="/authorization"><button className="join">Start your journey</button> </Link>
                         </div>
                     </div>
                 </div>
