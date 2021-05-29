@@ -7,8 +7,8 @@ import Python from "../assets/Python.png";
 import Angular from "../assets/Angular.png";
 import Linux from "../assets/Linux.png";
 import InfoSec from "../assets/Infosec.png";
-import Cloud from "../assets/Cloud.png"
-import Mobile from "../assets/Mobile.png"
+import Cloud from "../assets/Cloud.png";
+import Mobile from "../assets/Mobile.png";
 import ScrollAnimation from "react-animate-on-scroll";
 import { Link } from "react-router-dom";
 
@@ -27,7 +27,11 @@ const Trainings = () => {
                                 science or cybersecurity
                             </h1>
 
-                            <Link to="/authorization"><button className="join">Start your journey</button> </Link>
+                            <Link to="/authorization">
+                                <button className="join">
+                                    Start your journey
+                                </button>{" "}
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -47,13 +51,18 @@ const Trainings = () => {
                                     </div>
 
                                     <div className="flip-card-back">
-                                        <p>
-                                            Trainings and Mentorship for youth
-                                            and young upcoming innovators.
-                                        </p>
-                                        <button className="btn">
-                                            Learn more
-                                        </button>
+                                        <ol>
+                                            <li>Objectives</li>
+                                            <li>Topics</li>
+                                            <li>Cost</li>
+                                            <li>Duration</li>
+                                        </ol>
+                                        <Link
+                                            to="/authorization"
+                                            className="btn"
+                                        >
+                                            Register
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
@@ -67,13 +76,18 @@ const Trainings = () => {
                                     </div>
 
                                     <div className="flip-card-back">
-                                        <p>
-                                            Trainings and Mentorship for youth
-                                            and young upcoming innovators.
-                                        </p>
-                                        <button className="btn">
-                                            Learn more
-                                        </button>
+                                        <ol>
+                                            <li>Objectives</li>
+                                            <li>Topics</li>
+                                            <li>Cost</li>
+                                            <li>Duration</li>
+                                        </ol>
+                                        <Link
+                                            to="/authorization"
+                                            className="btn"
+                                        >
+                                            Register
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
@@ -89,13 +103,18 @@ const Trainings = () => {
                                     </div>
 
                                     <div className="flip-card-back">
-                                        <p>
-                                            Trainings and Mentorship for youth
-                                            and young upcoming innovators.
-                                        </p>
-                                        <button className="btn">
-                                            Learn more
-                                        </button>
+                                        <ol>
+                                            <li>Objectives</li>
+                                            <li>Topics</li>
+                                            <li>Cost</li>
+                                            <li>Duration</li>
+                                        </ol>
+                                        <Link
+                                            to="/authorization"
+                                            className="btn"
+                                        >
+                                            Register
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
@@ -109,13 +128,18 @@ const Trainings = () => {
                                     </div>
 
                                     <div className="flip-card-back">
-                                        <p>
-                                            Trainings and Mentorship for youth
-                                            and young upcoming innovators.
-                                        </p>
-                                        <button className="btn">
-                                            Learn more
-                                        </button>
+                                        <ol>
+                                            <li>Objectives</li>
+                                            <li>Topics</li>
+                                            <li>Cost</li>
+                                            <li>Duration</li>
+                                        </ol>
+                                        <Link
+                                            to="/authorization"
+                                            className="btn"
+                                        >
+                                            Register
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
@@ -131,13 +155,18 @@ const Trainings = () => {
                                     </div>
 
                                     <div className="flip-card-back">
-                                        <p>
-                                            Trainings and Mentorship for youth
-                                            and young upcoming innovators.
-                                        </p>
-                                        <button className="btn">
-                                            Learn more
-                                        </button>
+                                        <ol>
+                                            <li>Objectives</li>
+                                            <li>Topics</li>
+                                            <li>Cost</li>
+                                            <li>Duration</li>
+                                        </ol>
+                                        <Link
+                                            to="/authorization"
+                                            className="btn"
+                                        >
+                                            Register
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
@@ -155,13 +184,18 @@ const Trainings = () => {
                                     </div>
 
                                     <div className="flip-card-back">
-                                        <p>
-                                            Trainings and Mentorship for youth
-                                            and young upcoming innovators.
-                                        </p>
-                                        <button className="btn">
-                                            Learn more
-                                        </button>
+                                        <ol>
+                                            <li>Objectives</li>
+                                            <li>Topics</li>
+                                            <li>Cost</li>
+                                            <li>Duration</li>
+                                        </ol>
+                                        <Link
+                                            to="/authorization"
+                                            className="btn"
+                                        >
+                                            Register
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
@@ -177,13 +211,18 @@ const Trainings = () => {
                                     </div>
 
                                     <div className="flip-card-back">
-                                        <p>
-                                            Trainings and Mentorship for youth
-                                            and young upcoming innovators.
-                                        </p>
-                                        <button className="btn">
-                                            Learn more
-                                        </button>
+                                        <ol>
+                                            <li>Objectives</li>
+                                            <li>Topics</li>
+                                            <li>Cost</li>
+                                            <li>Duration</li>
+                                        </ol>
+                                        <Link
+                                            to="/authorization"
+                                            className="btn"
+                                        >
+                                            Register
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
@@ -201,13 +240,18 @@ const Trainings = () => {
                                     </div>
 
                                     <div className="flip-card-back">
-                                        <p>
-                                            Trainings and Mentorship for youth
-                                            and young upcoming innovators.
-                                        </p>
-                                        <button className="btn">
-                                            Learn more
-                                        </button>
+                                        <ol>
+                                            <li>Objectives</li>
+                                            <li>Topics</li>
+                                            <li>Cost</li>
+                                            <li>Duration</li>
+                                        </ol>
+                                        <Link
+                                            to="/authorization"
+                                            className="btn"
+                                        >
+                                            Register
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
@@ -225,13 +269,18 @@ const Trainings = () => {
                                     </div>
 
                                     <div className="flip-card-back">
-                                        <p>
-                                            Trainings and Mentorship for youth
-                                            and young upcoming innovators.
-                                        </p>
-                                        <button className="btn">
-                                            Learn more
-                                        </button>
+                                        <ol>
+                                            <li>Objectives</li>
+                                            <li>Topics</li>
+                                            <li>Cost</li>
+                                            <li>Duration</li>
+                                        </ol>
+                                        <Link
+                                            to="/authorization"
+                                            className="btn"
+                                        >
+                                            Register
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
@@ -245,13 +294,18 @@ const Trainings = () => {
                                     </div>
 
                                     <div className="flip-card-back">
-                                        <p>
-                                            Trainings and Mentorship for youth
-                                            and young upcoming innovators.
-                                        </p>
-                                        <button className="btn">
-                                            Learn more
-                                        </button>
+                                        <ol>
+                                            <li>Objectives</li>
+                                            <li>Topics</li>
+                                            <li>Cost</li>
+                                            <li>Duration</li>
+                                        </ol>
+                                        <Link
+                                            to="/authorization"
+                                            className="btn"
+                                        >
+                                            Register
+                                        </Link>
                                     </div>
                                 </div>
                             </div>

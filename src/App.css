@@ -849,6 +849,9 @@ h1 strong {
 .img img {
     width: 60%;
 }
+ol {
+    list-style: none;
+}
 /* End of training */
 
 /* Contact page  */
