@@ -23,14 +23,14 @@ const Contact = () => {
                             <div className="input-data">
                                 <input type="email" name="email" required />
                                 <div className="underline"></div>
-                                <label for="">Email Address</label>
+                                <label htmlFor="">Email Address</label>
                             </div>
                         </div>
                         <div className="form-row">
                             <div className="input-data">
                                 <input type="text" name="subject" required />
                                 <div className="underline"></div>
-                                <label for="">Subject</label>
+                                <label htmlFor="">Subject</label>
                             </div>
                         </div>
                         <div className="form-row">
@@ -44,7 +44,7 @@ const Contact = () => {
                                 ></textarea>
                                 <br />
                                 <div className="underline"></div>
-                                <label for="">Write your message</label>
+                                <label htmlFor="">Write your message</label>
                                 <br />
                             </div>
                         </div>

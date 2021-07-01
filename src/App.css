@@ -49,6 +49,8 @@ a:visited {
     height: 36px;
     margin: -20px auto 0 auto;
     overflow: hidden;
+    background-color: var(--theme-color);
+    box-shadow: 1px 1px 15px #000000 inset;
 }
 .button.r,
 .button.r .layer {
@@ -92,7 +94,7 @@ a:visited {
     background-color: var(--main-text-color);
     border-radius: 15px;
     box-shadow: 3px 5px 9px rgba(0, 0, 0, 0.25),
-        -3px -5px 7px rgba(0, 0, 0, 0.25);
+        -3px -5px 7px rgba(0, 0, 0, 0.35);
     transition: 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15) all;
 }
 
@@ -190,7 +192,7 @@ a:visited {
     justify-content: center;
     padding: 10px 0 10px 0;
     box-shadow: 0px 2px 3px #e5e5e5;
-    z-index: 2;
+    z-index: 10;
 }
 .slideDown {
     animation-name: slideDown;
@@ -252,7 +254,7 @@ a:visited {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    z-index: 3;
+    z-index: 11;
 }
 
 .nav-logo {
@@ -415,6 +417,7 @@ a:visited {
     color: var(--main-bg-color);
     margin: 0;
     padding: 2rem 0;
+    z-index: 15;
 }
 .footer-bg .container {
     display: flex;
@@ -901,15 +904,15 @@ form .form-row .textarea {
     border: none;
     font-size: 17px;
     background-color: transparent;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.12);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
 }
 
 .input-data input:focus ~ label,
 .textarea textarea:focus ~ label,
 .input-data input:valid ~ label,
 .textarea textarea:valid ~ label {
-    transform: translateY(-20px);
-    font-size: 14px;
+    transform: translateY(-23px);
+    font-size: 12px;
     color: #3498db;
 }
 .input-data input:focus,
@@ -1052,13 +1055,70 @@ form .form-row .textarea {
 }
 #login {
     left: 50px;
-}::-webkit-scrollbar {
+}
+::-webkit-scrollbar {
     display: none;
 }
 #register {
     left: 550px;
 }
+.error {
+    padding: 1rem 0.6rem;
+    background-color: hsla(0, 100%, 50%, 0.507);
+    text-align: center;
+    border-radius: 20px;
+}
 /* End of authorization page */
+/* Blog page */
+.news-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 2rem 0;
+    border: 1px solid #000;
+    margin: 1rem 0;
+}
+.news-card .story-line {
+    width: 100%;
+}
+.news-card .story-line p {
+    padding-top: 1rem;
+}
+.news-card .story-line p small {
+    color: rgb(255, 175, 1);
+}
+.news-title {
+    font-size: 2.5rem;
+    font-weight: 500;
+    line-height: 150%;
+    text-align: center;
+    padding-bottom: 2rem;
+}
+label {
+    color: #000;
+}
+.shadow-hover:hover {
+    transition: all 0.4s;
+    box-shadow: 0 2px 9px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+.story-line {
+    padding: 2rem;
+    line-height: 150%;
+    width: 60%;
+    letter-spacing: 1px;
+}
+.story-line h3 {
+    margin: 1rem 0;
+    letter-spacing: 2px;
+    font-size: 1.5rem;
+}
+.news h2 {
+    text-align: center;
+    font-weight: 600;
+    padding: 1rem;
+}
+/* End of blog page */
 
 /* Media queries */
 @media only screen and (max-width: 800px) {
@@ -1189,7 +1249,7 @@ form .form-row .textarea {
 @media only screen and (max-width: 540px) {
     h1 {
         font-size: 1.4rem;
-        padding: 0 0  10px 0;
+        padding: 0 0 10px 0;
     }
     .landing {
         padding: 0.5rem;

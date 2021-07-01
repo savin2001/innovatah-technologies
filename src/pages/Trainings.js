@@ -27,19 +27,17 @@ const Trainings = () => {
                                 science or cybersecurity
                             </h1>
 
-                            <Link to="/authorization">
-                                <button className="join">
-                                    Start your journey
-                                </button>{" "}
-                            </Link>
+                            <a href="#courses" className="join">
+                                View courses
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
             <ScrollAnimation animateIn="expandUp" animateOnce>
                 <div className="container">
-                    <div className="training-courses">
-                        <h2>our courses</h2>
+                    <div id="courses" className="training-courses">
+                        <h2 >our courses</h2>
                         <div className="focus-cards courses">
                             <div className="card flip-card">
                                 <div className="flip-card-inner">

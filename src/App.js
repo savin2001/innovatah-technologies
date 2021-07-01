@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+// import axios from "axios";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyles } from "./components/Globalstyle";
 import { lightTheme, darkTheme } from "./components/Themes";
@@ -17,8 +18,16 @@ import Innovator from "./pages/Innovator";
 import Focus from "./pages/Focus";
 import Trainings from "./pages/Trainings";
 import Blog from "./pages/Blog";
-import Authorization from "./pages/Authorization"
-import API from "./pages/Api"
+import Authorization from "./pages/Authorization";
+import API from "./pages/Api";
+import Dashboard from "./pages/authorization/Dashboard";
+// import PrivateRoute from "./pages/utils/PrivateRoute";
+// import PublicRoute from "./pages/utils/PublicRoute";
+// import {
+//     getToken,
+//     removeUserSession,
+//     setUserSession,
+// } from "./pages/utils/Common";
 
 function App() {
     const [theme, setTheme] = useState("light");
@@ -26,7 +35,7 @@ function App() {
         theme === "light" ? setTheme("dark") : setTheme("light");
     };
 
-    const [isLoading, setLoading] = useState(true);
+    const [isLoading, setIsLoading] = useState(true);
 
     function fakeRequest() {
         return new Promise((resolve) => setTimeout(() => resolve(), 1500));
@@ -37,7 +46,7 @@ function App() {
             const el = document.querySelector(".loading");
             if (el) {
                 el.remove();
-                setLoading(!isLoading);
+                setIsLoading(!isLoading);
             }
         });
     });
@@ -45,6 +54,8 @@ function App() {
     if (isLoading) {
         return <Loading />;
     }
+
+    
 
     return (
         <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
@@ -76,11 +87,7 @@ function App() {
                                 exact
                                 component={Products}
                             />
-                            <Route
-                                path="/api"
-                                exact
-                                component={API}
-                            />
+                            <Route path="/api" exact component={API} />
                             <Route
                                 path="/trainings"
                                 exact
@@ -94,10 +101,19 @@ function App() {
                             <Route path="/about" exact component={About} />
                             <Route path="/blog" exact component={Blog} />
                             <Route path="/contact" exact component={Contact} />
-                            <Route path="/authorization" exact component={Authorization} />
+                            <Route
+                                path="/authorization"
+                                exact
+                                component={Authorization}
+                            />
+                            <Route
+                                path="/dashboard"
+                                exact
+                                component={Dashboard}
+                            />
                         </Switch>
                     </Router>
-                <Footer />
+                    <Footer />
                 </div>
             </>
         </ThemeProvider>
