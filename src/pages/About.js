@@ -72,7 +72,11 @@ const About = () => {
                                     </p>
                                 </div>
                                 <div>
-                                    <button className="btn">Learn more</button>
+                                    <Link to="focus#Digital">
+                                        <button className="btn">
+                                            Learn more
+                                        </button>
+                                    </Link>
                                 </div>
                             </div>
                             <div className="card">
@@ -91,7 +95,11 @@ const About = () => {
                                     </p>
                                 </div>
                                 <div>
-                                    <button className="btn">Learn more</button>
+                                    <Link to="focus#Transformation">
+                                        <button className="btn">
+                                            Learn more
+                                        </button>
+                                    </Link>
                                 </div>
                             </div>
                             <div className="card">
@@ -107,7 +115,11 @@ const About = () => {
                                     </p>
                                 </div>
                                 <div>
-                                    <button className="btn">Learn more</button>
+                                    <Link to="focus#Community">
+                                        <button className="btn">
+                                            Learn more
+                                        </button>
+                                    </Link>
                                 </div>
                             </div>
                             <div className="card">
@@ -123,7 +135,11 @@ const About = () => {
                                     </p>
                                 </div>
                                 <div>
-                                    <button className="btn">Learn more</button>
+                                    <Link to="focus#Operation">
+                                        <button className="btn">
+                                            Learn more
+                                        </button>
+                                    </Link>
                                 </div>
                             </div>
                             <div className="card">
@@ -139,7 +155,11 @@ const About = () => {
                                     </p>
                                 </div>
                                 <div>
-                                    <button className="btn">Learn more</button>
+                                    <Link to="focus#Digital">
+                                        <button className="btn">
+                                            Learn more
+                                        </button>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
@@ -173,7 +193,11 @@ const About = () => {
                                         for communities empowerment as they
                                         create wealth.
                                     </p>
-                                    <button className="btn">Learn more</button>
+                                    <Link to="focus#Digital">
+                                        <button className="btn">
+                                            Learn more
+                                        </button>
+                                    </Link>
                                 </div>
                             </div>
                         </div>

@@ -19,7 +19,7 @@ const Blog = () => {
             <ScrollAnimation animateIn="expandUp" animateOnce>
                 <div className="container">
                     <div className="news">
-                        <h2 >Lorem Ipsum</h2>
+                        <h2>Lorem Ipsum</h2>
                         <ScrollAnimation animateIn="expandUp">
                             <div className="news-card shadow-hover">
                                 <div className="story-line">
@@ -48,17 +48,20 @@ const Blog = () => {
                                     <p>
                                         <small>date</small>
                                     </p>
-                                    <p>
-                                        Lorem ipsum dolor sit amet consectetur
-                                        adipisicing elit. Perspiciatis debitis,
-                                        amet officiis commodi numquam libero
-                                        tenetur quia aperiam. Totam ipsum iste
-                                        nobis, ut at, obcaecati id hic quo
-                                        deleniti velit deserunt perspiciatis
-                                        amet ratione sint ullam nisi nam debitis
-                                        eaque dolore numquam praesentium. Cumque
-                                        quo sapiente nobis officia.
-                                    </p>
+                                    <div className="about-card">
+                                        <p>
+                                            Lorem ipsum dolor sit amet
+                                            consectetur adipisicing elit.
+                                            Perspiciatis debitis, amet officiis
+                                            commodi numquam libero tenetur quia
+                                            aperiam. Totam ipsum iste nobis, ut
+                                            at, obcaecati id hic quo deleniti
+                                            velit deserunt perspiciatis amet
+                                            ratione sint ullam nisi nam debitis
+                                            eaque dolore numquam praesentium.
+                                            Cumque quo sapiente nobis officia.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </ScrollAnimation>

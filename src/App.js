@@ -14,7 +14,7 @@ import Services from "./pages/Services";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Products from "./pages/Products";
-import Innovator from "./pages/Innovator";
+import Innovatah from "./pages/Innovatah";
 import Focus from "./pages/Focus";
 import Trainings from "./pages/Trainings";
 import Blog from "./pages/Blog";
@@ -94,9 +94,9 @@ function App() {
                                 component={Trainings}
                             />
                             <Route
-                                path="/innovator"
+                                path="/innovatah"
                                 exact
-                                component={Innovator}
+                                component={Innovatah}
                             />
                             <Route path="/about" exact component={About} />
                             <Route path="/blog" exact component={Blog} />

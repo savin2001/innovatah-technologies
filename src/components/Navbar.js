@@ -37,13 +37,14 @@ const Navbar = () => {
                     <ul className={open ? "nav-links active" : "nav-links"}>
                         <li className="nav-item">
                             <Link
-                                to="/focus"
+                                to="/about"
                                 className="nav-link"
                                 onClick={closeMenu}
                             >
-                                focus
+                                About
                             </Link>
                         </li>
+
                         <li className="nav-item">
                             <p className="nav-link" onClick={onClick}>
                                 Solutions
@@ -85,11 +86,11 @@ const Navbar = () => {
                         </li>
                         <li className="nav-item">
                             <Link
-                                to="/innovator"
+                                to="/innovatah"
                                 className="nav-link"
                                 onClick={closeMenu}
                             >
-                                Innovator
+                                Innovatah
                             </Link>
                         </li>
                         <li className="nav-item">
@@ -103,13 +104,14 @@ const Navbar = () => {
                         </li>
                         <li className="nav-item">
                             <Link
-                                to="/about"
+                                to="/focus"
                                 className="nav-link"
                                 onClick={closeMenu}
                             >
-                                About
+                                focus
                             </Link>
                         </li>
+
                         <li className="nav-item">
                             <Link
                                 to="/blog"

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { setUserSession } from "./utils/Common";
+import isLoading from "../components/Loading";
 
 const Authorization = (props) => {
     let moveLeft = document.getElementById("login");
@@ -27,11 +28,13 @@ const Authorization = (props) => {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [loading, setLoading] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(null);
 
     const handleLogin = () => {
         setError(null);
         setLoading(true);
+        setIsLoading(true);
         axios
             .post("http://localhost:4000/users/signin", {
                 username: username,
@@ -39,6 +42,7 @@ const Authorization = (props) => {
             })
             .then((response) => {
                 setLoading(false);
+                setIsLoading(true);
                 setUserSession(response.data.token, response.data.user);
                 props.history.push("/dashboard");
             })
@@ -55,6 +59,19 @@ const Authorization = (props) => {
                 console.error("error ", error);
             });
     };
+    function fakeRequest() {
+        return new Promise((resolve) => setTimeout(() => resolve(), 1500));
+    }
+    fakeRequest().then(() => {
+        const el = document.querySelector(".loading");
+        if (el) {
+            el.remove();
+            setIsLoading(isLoading);
+        }
+    });
+    if (isLoading) {
+        return <isLoading />;
+    }
     return (
         <>
             <div className="container slideLeft">

@@ -22,7 +22,7 @@ const Home = () => {
                             <img src={Tag} alt="" />
                             <div className="fg">Training</div>
                         </Link>
-                        <Link to="/srvices" className="tag">
+                        <Link to="/services" className="tag">
                             <img src={Tag} alt="" />
                             <div className="fg">Services </div>
                         </Link>
