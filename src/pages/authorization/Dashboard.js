@@ -14,19 +14,19 @@ const Dashboard = (props) => {
         <>
             <div classNameName="container-landing">
                 <div classNameName="landing slideLeft">
-                    <header class="page-header">
+                    <header className="page-header">
                         <nav>
                             <a
                                 href="#0"
                                 aria-label="forecastr logo"
-                                class="logo"
+                                className="logo"
                             >
                                 <svg width="140" height="49">
                                     <use xlinkHref="#logo"></use>
                                 </svg>
                             </a>
                             <button
-                                class="toggle-mob-menu"
+                                className="toggle-mob-menu"
                                 aria-expanded="false"
                                 aria-label="open menu"
                             >
@@ -34,8 +34,8 @@ const Dashboard = (props) => {
                                     <use xlinkHref="#down"></use>
                                 </svg>
                             </button>
-                            <ul class="admin-menu">
-                                <li class="menu-heading">
+                            <ul className="admin-menu">
+                                <li className="menu-heading">
                                     <h3>{user.name}</h3>
                                 </li>
                                 <li>
@@ -70,7 +70,7 @@ const Dashboard = (props) => {
                                         <span>Other courses</span>
                                     </a>
                                 </li>
-                                <li class="menu-heading">
+                                <li className="menu-heading">
                                     <h3>Settings</h3>
                                 </li>
                                 <li>
@@ -97,7 +97,7 @@ const Dashboard = (props) => {
                                         <span>Log out</span>
                                     </button>
                                     <button
-                                        class="collapse-btn"
+                                        className="collapse-btn"
                                         aria-expanded="true"
                                         aria-label="collapse menu"
                                     >
@@ -110,19 +110,19 @@ const Dashboard = (props) => {
                             </ul>
                         </nav>
                     </header>
-                    <section class="page-content">
-                        <section class="search-and-user">
-                            <div class="admin-profile">
-                                <span class="greeting">Hello {user.name}</span>
-                                <div class="notifications">
-                                    <span class="badge">1</span>
+                    <section className="page-content">
+                        <section className="search-and-user">
+                            <div className="admin-profile">
+                                <span className="greeting">Hello {user.name}</span>
+                                <div className="notifications">
+                                    <span className="badge">1</span>
                                     <svg>
                                         <use xlinkHref="#users"></use>
                                     </svg>
                                 </div>
                             </div>
                         </section>
-                        <section class="grid">
+                        <section className="grid">
                             <article>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae modi possimus error nostrum provident maiores voluptas tempore aspernatur ab consequuntur unde minima blanditiis soluta earum, corporis amet cum aperiam ipsum!</article>
                             <article>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae modi possimus error nostrum provident maiores voluptas tempore aspernatur ab consequuntur unde minima blanditiis soluta earum, corporis amet cum aperiam ipsum!</article>
                             <article>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae modi possimus error nostrum provident maiores voluptas tempore aspernatur ab consequuntur unde minima blanditiis soluta earum, corporis amet cum aperiam ipsum!</article>

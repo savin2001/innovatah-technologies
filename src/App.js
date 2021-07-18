@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 // import axios from "axios";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyles } from "./components/Globalstyle";
@@ -14,7 +14,7 @@ import Services from "./pages/Services";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Products from "./pages/Products";
-import Innovatah from "./pages/Innovatah";
+import Innovator from "./pages/Innovator";
 import Focus from "./pages/Focus";
 import Trainings from "./pages/Trainings";
 import Blog from "./pages/Blog";
@@ -55,8 +55,6 @@ function App() {
         return <Loading />;
     }
 
-    
-
     return (
         <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
             <>
@@ -65,10 +63,10 @@ function App() {
                     <Router>
                         <Navbar />
                         <div className="theme" onClick={themeToggler}>
-                            <div class="button r" id="button-1">
-                                <input type="checkbox" class="checkbox" />
-                                <div class="knobs"></div>
-                                <div class="layer">
+                            <div className="button r" id="button-1">
+                                <input type="checkbox" className="checkbox" />
+                                <div className="knobs"></div>
+                                <div className="layer">
                                     <div id="top-right"></div>
                                 </div>
                             </div>
@@ -82,6 +80,7 @@ function App() {
                                 exact
                                 component={Services}
                             />
+
                             <Route
                                 path="/products"
                                 exact
@@ -94,9 +93,9 @@ function App() {
                                 component={Trainings}
                             />
                             <Route
-                                path="/innovatah"
+                                path="/innovator"
                                 exact
-                                component={Innovatah}
+                                component={Innovator}
                             />
                             <Route path="/about" exact component={About} />
                             <Route path="/blog" exact component={Blog} />

@@ -20,7 +20,7 @@ const Blog = () => {
                 <div className="container">
                     <div className="news">
                         <h2>Lorem Ipsum</h2>
-                        <ScrollAnimation animateIn="expandUp">
+                        <ScrollAnimation animateIn="expandUp" animateOnce>
                             <div className="news-card shadow-hover">
                                 <div className="story-line">
                                     <h3>Lorem ipsum dolor sit</h3>
@@ -41,7 +41,7 @@ const Blog = () => {
                                 </div>
                             </div>
                         </ScrollAnimation>
-                        <ScrollAnimation animateIn="expandUp">
+                        <ScrollAnimation animateIn="expandUp" animateOnce>
                             <div className="news-card shadow-hover">
                                 <div className="story-line">
                                     <h3>Lorem ipsum dolor sit</h3>
@@ -65,7 +65,7 @@ const Blog = () => {
                                 </div>
                             </div>
                         </ScrollAnimation>
-                        <ScrollAnimation animateIn="expandUp">
+                        <ScrollAnimation animateIn="expandUp" animateOnce>
                             <div className="news-card shadow-hover">
                                 <div className="story-line">
                                     <h3>Lorem ipsum dolor sit</h3>
@@ -86,7 +86,7 @@ const Blog = () => {
                                 </div>
                             </div>
                         </ScrollAnimation>
-                        <ScrollAnimation animateIn="expandUp">
+                        <ScrollAnimation animateIn="expandUp" animateOnce>
                             <div className="news-card shadow-hover">
                                 <div className="story-line">
                                     <h3>Lorem ipsum dolor sit</h3>
@@ -107,7 +107,7 @@ const Blog = () => {
                                 </div>
                             </div>
                         </ScrollAnimation>
-                        <ScrollAnimation animateIn="expandUp">
+                        <ScrollAnimation animateIn="expandUp" animateOnce>
                             <div className="news-card shadow-hover">
                                 <div className="story-line">
                                     <h3>Lorem ipsum dolor sit</h3>

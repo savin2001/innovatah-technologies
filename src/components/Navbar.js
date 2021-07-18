@@ -86,7 +86,7 @@ const Navbar = () => {
                         </li>
                         <li className="nav-item">
                             <Link
-                                to="/innovatah"
+                                to="/innovator"
                                 className="nav-link"
                                 onClick={closeMenu}
                             >

@@ -1079,11 +1079,14 @@ form .form-row .textarea {
 /* Service page */
 .service-bg {
     width: 100%;
-    background: #f5f8fd;
+    /* background: #f5f8fd; */
 }
 .service-container h2 {
     text-align: center;
     padding: 2rem 0;
+}
+.service-container h1 {
+    color: brown;
 }
 #services {
     padding: 60px 0 40px 0;
@@ -1123,13 +1126,22 @@ form .form-row .textarea {
     font-weight: 700;
     margin-bottom: 15px;
     font-size: 18px;
+    
+}
+#serviceCat {
+    background-color: var(--theme-color);
+}
+.service-bg .container-bg1 p {
+    color: #2e2d2d;
 }
 
-#services .title a {
-    color: #111;
+#services .title p, .box p {
+    color: #2e2d2d;
 }
-
-#services .box:hover .title a {
+.box p {
+    text-align: left;
+}
+#services .box:hover .title p {
     color: var(--theme-color);
 }
 #services .box:hover .title a:hover {
@@ -1138,10 +1150,10 @@ form .form-row .textarea {
 .service-container .row {
     display: flex;
     flex-wrap: wrap;
-    flex: 6;
+    flex: 3;
 }
 .service-container .row .col {
-    flex: 2;
+    flex: 1;
     width: 100%;
     row-gap: 20px;
     column-gap: 20px;

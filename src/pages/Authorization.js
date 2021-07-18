@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { setUserSession } from "./utils/Common";
-import isLoading from "../components/Loading";
+// import { setUserSession } from "./utils/Common";
+// import isLoading from "../components/Loading";
 
 const Authorization = (props) => {
     let moveLeft = document.getElementById("login");
@@ -28,50 +28,46 @@ const Authorization = (props) => {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [loading, setLoading] = useState(false);
-    const [isLoading, setIsLoading] = useState(false);
+    // const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(null);
 
     const handleLogin = () => {
-        setError(null);
-        setLoading(true);
-        setIsLoading(true);
-        axios
-            .post("http://localhost:4000/users/signin", {
-                username: username,
-                password: password,
+        let data = JSON.stringify({
+            username: "karanjaeric",
+            password: "karanjaeric",
+        });
+
+        let config = {
+            method: "post",
+            url: "http://188.166.22.79:8080/innovatah-website-api/student/authenticate",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            data: data,
+        };
+
+        axios(config)
+            .then(function (response) {
+                console.log(JSON.stringify(response.data));
             })
-            .then((response) => {
-                setLoading(false);
-                setIsLoading(true);
-                setUserSession(response.data.token, response.data.user);
-                props.history.push("/dashboard");
-            })
-            .catch((error) => {
-                setLoading(false);
-                if (
-                    error.response.status === 401 ||
-                    error.response.status === 400
-                ) {
-                    setError(error.response.data.message);
-                } else {
-                    setError("Something went wrong! Try again later.");
-                }
-                console.error("error ", error);
+            .catch(function (error) {
+                console.log(error);
             });
     };
-    function fakeRequest() {
-        return new Promise((resolve) => setTimeout(() => resolve(), 1500));
-    }
-    fakeRequest().then(() => {
-        const el = document.querySelector(".loading");
-        if (el) {
-            el.remove();
-            setIsLoading(isLoading);
-        }
-    });
-    if (isLoading) {
-        return <isLoading />;
-    }
+
+    // function fakeRequest() {
+    //     return new Promise((resolve) => setTimeout(() => resolve(), 1500));
+    // }
+    // fakeRequest().then(() => {
+    //     const el = document.querySelector(".loading");
+    //     if (el) {
+    //         el.remove();
+    //         setIsLoading(isLoading);
+    //     }
+    // });
+    // if (isLoading) {
+    //     return <isLoading />;
+    // }
     return (
         <>
             <div className="container slideLeft">
@@ -113,7 +109,7 @@ const Authorization = (props) => {
                                             required
                                         />
                                         <div className="underline"></div>
-                                        <label for="">Username</label>
+                                        <label htmlFor="">Username</label>
                                     </div>
                                 </div>
                                 <div className="form-row">
@@ -130,11 +126,11 @@ const Authorization = (props) => {
                                             required
                                         />
                                         <div className="underline"></div>
-                                        <label for="">Password</label>
+                                        <label htmlFor="">Password</label>
                                     </div>
                                 </div>
                                 <div className="form-row">
-                                    <input type="checkbox" name="" id="" />
+                                    <input type="checkbox" name=""/>
                                     <span className="">Remember me</span>
                                 </div>
                                 <input
@@ -191,7 +187,7 @@ const Authorization = (props) => {
                                             required
                                         />
                                         <div className="underline"></div>
-                                        <label for="">Email</label>
+                                        <label htmlFor="">Email</label>
                                     </div>
                                 </div>
                                 <div className="form-row">
@@ -202,7 +198,7 @@ const Authorization = (props) => {
                                             required
                                         />
                                         <div className="underline"></div>
-                                        <label for="">Phone number</label>
+                                        <label htmlFor="">Phone number</label>
                                     </div>
                                 </div>
                                 <div className="form-row">
@@ -213,7 +209,7 @@ const Authorization = (props) => {
                                             required
                                         />
                                         <div className="underline"></div>
-                                        <label for="">
+                                        <label htmlFor="">
                                             Level of study{" "}
                                             <small>
                                                 <blockquote>
@@ -234,7 +230,7 @@ const Authorization = (props) => {
                                             required
                                         />
                                         <div className="underline"></div>
-                                        <label for="">Choose username</label>
+                                        <label htmlFor="">Choose username</label>
                                     </div>
                                 </div>
                                 <div className="form-row">
@@ -245,7 +241,7 @@ const Authorization = (props) => {
                                             required
                                         />
                                         <div className="underline"></div>
-                                        <label for="">Password</label>
+                                        <label htmlFor="">Password</label>
                                     </div>
                                 </div>
                                 <div className="form-row">
@@ -256,11 +252,11 @@ const Authorization = (props) => {
                                             required
                                         />
                                         <div className="underline"></div>
-                                        <label for="">Confirm password</label>
+                                        <label htmlFor="">Confirm password</label>
                                     </div>
                                 </div>
                                 <div className="form-row">
-                                    <input type="checkbox" name="" id="" />
+                                    <input type="checkbox" name="" />
                                     <span className="">
                                         I agree to the terms and conditions
                                     </span>
