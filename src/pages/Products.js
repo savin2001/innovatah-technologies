@@ -2,6 +2,45 @@ import React from "react";
 import { Link } from "react-router-dom";
 import ScrollAnimation from "react-animate-on-scroll";
 
+const productCategories = [
+    {
+        id: "p1",
+        imgUrl: "https://fadzrinmadu.github.io/hosted-assets/awesome-hover-effect-on-blog-posts-using-html-and-css/3.jpg",
+        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, soluta?",
+        subtext: "July 13, 2020",
+    },
+    {
+        id: "p2",
+        imgUrl: "https://fadzrinmadu.github.io/hosted-assets/awesome-hover-effect-on-blog-posts-using-html-and-css/1.jpg",
+        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, soluta?",
+        subtext: "July 13, 2020",
+    },
+    {
+        id: "p3",
+        imgUrl: "https://fadzrinmadu.github.io/hosted-assets/awesome-hover-effect-on-blog-posts-using-html-and-css/2.jpg",
+        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, soluta?",
+        subtext: "July 13, 2020",
+    },
+    {
+        id: "p4",
+        imgUrl: "https://fadzrinmadu.github.io/hosted-assets/awesome-hover-effect-on-blog-posts-using-html-and-css/3.jpg",
+        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, soluta?",
+        subtext: "July 13, 2020",
+    },
+    {
+        id: "p5",
+        imgUrl: "https://fadzrinmadu.github.io/hosted-assets/awesome-hover-effect-on-blog-posts-using-html-and-css/1.jpg",
+        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, soluta?",
+        subtext: "July 13, 2020",
+    },
+    {
+        id: "p6",
+        imgUrl: "https://fadzrinmadu.github.io/hosted-assets/awesome-hover-effect-on-blog-posts-using-html-and-css/2.jpg",
+        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, soluta?",
+        subtext: "July 13, 2020",
+    },
+];
+
 const Products = () => {
     return (
         <>
@@ -25,121 +64,24 @@ const Products = () => {
                     <section className="services section-bg" id="services">
                         <div className="service-container">
                             <h2>Our Products</h2>
-
-                            <div className="row">
-                                <div className="col">
-                                    <div className="box">
-                                        <div className="icon">
-                                            <i className="fa fa-briefcase service-icon"></i>
+                            <div className="blog-posts">
+                                {productCategories.map((item) => (
+                                    <div className="post" key={item.id}>
+                                        <img
+                                            src={item.imgUrl}
+                                            alt={item.id}
+                                            className="post-img"
+                                        />
+                                        <div className="post-content">
+                                            <h3>
+                                                {item.text}
+                                            </h3>
+                                            <span className="date">
+                                                {item.subtext}
+                                            </span>
                                         </div>
-
-                                        <h4 className="title">
-                                            <a href="#product1">Product 1</a>
-                                        </h4>
-                                        <p>
-                                            Laudem latine persequeris id sed, ex
-                                            fabulas delectus quo. No vel
-                                            partiendo abhorreant
-                                            vituperatoribus.
-                                        </p>
                                     </div>
-                                </div>
-
-                                <div className="col">
-                                    <div className="box">
-                                        <div className="icon">
-                                            <i className="fa fa-clipboard service-icon"></i>
-                                        </div>
-
-                                        <h4 className="title">
-                                            <a href="#product2">Product 2</a>
-                                        </h4>
-
-                                        <p>
-                                            Laudem latine persequeris id sed, ex
-                                            fabulas delectus quo. No vel
-                                            partiendo abhorreant
-                                            vituperatoribus.
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div className="col">
-                                    <div className="box">
-                                        <div className="icon">
-                                            <i className="fa fa-chart-bar service-icon"></i>
-                                        </div>
-
-                                        <h4 className="title">
-                                            <a href="#product3">Product 3</a>
-                                        </h4>
-
-                                        <p>
-                                            Laudem latine persequeris id sed, ex
-                                            fabulas delectus quo. No vel
-                                            partiendo abhorreant
-                                            vituperatoribus.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="row">
-                                <div className="col">
-                                    <div className="box">
-                                        <div className="icon">
-                                            <i className="fa fa-binoculars service-icon"></i>
-                                        </div>
-
-                                        <h4 className="title">
-                                            <a href="#product4">Product 4</a>
-                                        </h4>
-
-                                        <p>
-                                            Laudem latine persequeris id sed, ex
-                                            fabulas delectus quo. No vel
-                                            partiendo abhorreant
-                                            vituperatoribus.
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div className="col">
-                                    <div className="box">
-                                        <div className="icon">
-                                            <i className="fa fa-cog service-icon"></i>
-                                        </div>
-
-                                        <h4 className="title">
-                                            <a href="#product5">Product 5</a>
-                                        </h4>
-
-                                        <p className="description">
-                                            Laudem latine persequeris id sed, ex
-                                            fabulas delectus quo. No vel
-                                            partiendo abhorreant
-                                            vituperatoribus.
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div className="col">
-                                    <div className="box">
-                                        <div className="icon">
-                                            <i className="fa fa-calendar-alt service-icon"></i>
-                                        </div>
-
-                                        <h4 className="title">
-                                            <a href="#product5">Product 6</a>
-                                        </h4>
-
-                                        <p className="description">
-                                            Laudem latine persequeris id sed, ex
-                                            fabulas delectus quo. No vel
-                                            partiendo abhorreant
-                                            vituperatoribus.
-                                        </p>
-                                    </div>
-                                </div>
+                                ))}
                             </div>
                         </div>
                     </section>

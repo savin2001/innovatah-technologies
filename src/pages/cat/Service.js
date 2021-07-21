@@ -1,22 +1,31 @@
 import React from "react";
-import { withRouter } from "react-router-dom";
+import { withRouter, Link } from "react-router-dom";
 import ScrollAnimation from "react-animate-on-scroll";
-
 
 const Service = (props) => {
     console.log(props);
     return (
         <>
-            <ScrollAnimation
-                className="service-bg"
-                animateIn="expandUp"
-                id="serviceCat"
-            >
-                <div className="container-bg1">
-                    
-                        <h1>{props.match.params.title}</h1>
-                   
-                    <p>{props.match.params.body}</p>
+            <div className="container-landing">
+                <div className="landing slideLeft">
+                    <h1>{props.match.params.title}</h1>
+
+                    <Link to="/authorization">
+                        <button className="join">Start your journey</button>{" "}
+                    </Link>
+                </div>
+            </div>
+            <ScrollAnimation animateIn="fadeIn" animateOnce>
+                <div className="container-bg">
+                    <div className="container">
+                        <div className="about">
+                            <h2>Title</h2>
+                            <div className="text">
+                                <p>{props.match.params.body}</p>
+                                
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </ScrollAnimation>
         </>

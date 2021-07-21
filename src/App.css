@@ -1126,7 +1126,6 @@ form .form-row .textarea {
     font-weight: 700;
     margin-bottom: 15px;
     font-size: 18px;
-    
 }
 #serviceCat {
     background-color: var(--theme-color);
@@ -1135,7 +1134,8 @@ form .form-row .textarea {
     color: #2e2d2d;
 }
 
-#services .title p, .box p {
+#services .title p,
+.box p {
     color: #2e2d2d;
 }
 .box p {
@@ -1159,6 +1159,65 @@ form .form-row .textarea {
     column-gap: 20px;
 }
 /* End of service page */
+/* Product page */
+.blog-posts {
+    width: min(1200px, 100%);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    cursor: pointer;
+}
+
+.post {
+    width: calc(33% - 10px);
+    overflow: hidden;
+}
+
+.post-img {
+    width: 100%;
+    border-radius: 6px;
+    transition: 0.3s linear;
+}
+
+.post-content {
+    margin: 0 20px;
+    padding: 30px;
+    border-radius: 6px;
+    transform: translateY(-60px);
+    transition: 0.3s linear;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    position: relative;
+}
+/* 
+.post-content:before {
+    background-color: rgba(255, 255, 255, 0.2);
+    filter: blur(0.2px) saturate(100%) contrast(45%) brightness(130%);
+    content: "";
+    height: 100%;
+    position: absolute;
+    width: 100%;
+} */
+.post-content h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.date {
+    font-size: 15px;
+    font-style: italic;
+    color: var(--theme-color);
+}
+.post:hover .post-img {
+    transform: translateY(20px);
+}
+
+.post:hover .post-content {
+    transform: translateY(-80px);
+}
+
+/* End of product page */
 /* Blog page */
 .news-card {
     display: flex;
@@ -1399,7 +1458,14 @@ main {
 html body .hide {
     display: none;
 }
-
+@media screen and (max-width: 1200px) {
+    .blog-posts {
+        justify-content: center;
+    }
+    .post {
+        width: min(600px, 100%);
+    }
+}
 @media screen and (min-width: 600px) {
     main {
         max-width: 800px;

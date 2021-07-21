@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 // import axios from "axios";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyles } from "./components/Globalstyle";
@@ -21,6 +21,7 @@ import Blog from "./pages/Blog";
 import Authorization from "./pages/Authorization";
 import API from "./pages/Api";
 import Dashboard from "./pages/authorization/Dashboard";
+import Service from "./pages/cat/Service";
 // import PrivateRoute from "./pages/utils/PrivateRoute";
 // import PublicRoute from "./pages/utils/PublicRoute";
 // import {
@@ -110,6 +111,11 @@ function App() {
                                 exact
                                 component={Dashboard}
                             />
+                            <Route
+                                path="/services/:id/:title/:body"
+                                exact
+                                component={Service}
+                            ></Route>
                         </Switch>
                     </Router>
                     <Footer />
