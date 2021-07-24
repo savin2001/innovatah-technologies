@@ -1,12 +1,9 @@
 import React from "react";
-import { getUser, removeUserSession } from "../utils/Common";
 import "./dashStyle.css";
-// import "./Functionality";
-const Dashboard = (props) => {
-    const user = getUser();
 
+const Dashboard = (props) => {
+    
     const handleLogout = () => {
-        removeUserSession();
         props.history.push("/authorization");
     };
 
@@ -36,7 +33,7 @@ const Dashboard = (props) => {
                             </button>
                             <ul className="admin-menu">
                                 <li className="menu-heading">
-                                    <h3>{user.name}</h3>
+                                    <h3>Username</h3>
                                 </li>
                                 <li>
                                     <a href="#0">
@@ -113,7 +110,7 @@ const Dashboard = (props) => {
                     <section className="page-content">
                         <section className="search-and-user">
                             <div className="admin-profile">
-                                <span className="greeting">Hello {user.name}</span>
+                                <span className="greeting">Hello username</span>
                                 <div className="notifications">
                                     <span className="badge">1</span>
                                     <svg>
