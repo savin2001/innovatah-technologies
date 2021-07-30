@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-// import axios from "axios";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyles } from "./components/Globalstyle";
 import { lightTheme, darkTheme } from "./components/Themes";
@@ -21,13 +20,10 @@ import Blog from "./pages/Blog";
 import Authorization from "./pages/Authorization";
 import API from "./pages/Api";
 import Dashboard from "./pages/authorization/Dashboard";
-// import PrivateRoute from "./pages/utils/PrivateRoute";
-// import PublicRoute from "./pages/utils/PublicRoute";
-// import {
-//     getToken,
-//     removeUserSession,
-//     setUserSession,
-// } from "./pages/utils/Common";
+import Service from "./pages/cat/Service";
+import Course from "./pages/cat/Course";
+import ApiPage from "./pages/cat/ApiPage"
+import Product from "./pages/cat/Product";
 
 function App() {
     const [theme, setTheme] = useState("light");
@@ -55,8 +51,6 @@ function App() {
         return <Loading />;
     }
 
-    
-
     return (
         <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
             <>
@@ -65,10 +59,10 @@ function App() {
                     <Router>
                         <Navbar />
                         <div className="theme" onClick={themeToggler}>
-                            <div class="button r" id="button-1">
-                                <input type="checkbox" class="checkbox" />
-                                <div class="knobs"></div>
-                                <div class="layer">
+                            <div className="button r" id="button-1">
+                                <input type="checkbox" className="checkbox" />
+                                <div className="knobs"></div>
+                                <div className="layer">
                                     <div id="top-right"></div>
                                 </div>
                             </div>
@@ -82,6 +76,7 @@ function App() {
                                 exact
                                 component={Services}
                             />
+
                             <Route
                                 path="/products"
                                 exact
@@ -110,6 +105,26 @@ function App() {
                                 path="/dashboard"
                                 exact
                                 component={Dashboard}
+                            />
+                            <Route
+                                path="/services/:id/:title/:body"
+                                exact
+                                component={Service}
+                            />
+                            <Route
+                                path="/course"
+                                exact
+                                component={Course}
+                            />
+                            <Route
+                                path="/api/:id/:title/:body"
+                                exact
+                                component={ApiPage}
+                            />
+                            <Route
+                                path="/product/:id/:text/:subtext/:body"
+                                exact
+                                component={Product}
                             />
                         </Switch>
                     </Router>
